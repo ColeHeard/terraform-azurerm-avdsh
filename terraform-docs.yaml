@@ -1,0 +1,50 @@
+###>-<###>-<###>-<###>-<###>-<###>-<###>-<###>-<###>-<###>-<###>-<###>-<###
+### Terraform-docs configuration file
+###>-<###>-<###>-<###>-<###>-<###>-<###>-<###>-<###>-<###>-<###>-<###>-<###
+formatter: "markdown table"
+
+content: |-
+  {{ .Providers }}
+
+  {{ .Resources }}
+
+  ## Example Usage: 
+  ```hcl
+  module "example" {
+    {{"\n\t"}} # Required Input
+    {{"\t"}} source  =
+    {{"\t"}} version  = 
+    {{- if .Module.RequiredInputs }}
+
+    {{- range .Module.RequiredInputs }}
+    {{"\t"}} {{ .Name }}  = {{ .GetValue }}
+    {{- end }}
+    {{- end }}
+  
+    {{- if .Module.OptionalInputs }}
+    {{"\n\t"}} # Optional Input
+    {{- range .Module.OptionalInputs }}
+    {{"\t"}} {{ .Name }}  = 
+    {{- end }}
+    {{- end }}
+  }
+  ```
+
+  {{ .Inputs }}  
+  
+  {{ .Outputs }}
+
+settings:
+  anchor: true
+  color: false
+  default: true
+  decription: false
+  escape: true
+  hide-empty: false
+  html: false
+  indent: 4
+  lockfile: true
+  read-comments: true
+  required: true
+  sensitive: true
+  type: true
