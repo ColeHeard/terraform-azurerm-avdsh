@@ -26,8 +26,7 @@ jobs:
 # If the README.md does exist, the Terraform-docs content will be injected between the delimiters <!-- BEGIN_TF_DOCS --> and <!-- END_TF_DOCS -->
 # For more information on Terraform-docs, visit their site: https://terraform-docs.io
     - name: README.md generation
-      uses: terraform-docs/gh-actions@main
-      continue-on-error: true
+      uses: actuarysailor/gh-actions@master
       id: tfdocs
       with:
         config-file: terraform-docs.yaml
