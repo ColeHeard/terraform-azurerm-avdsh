@@ -6,4 +6,4 @@ You can really leverage cost savings with scaling plans here - but the mutltises
 
 Note the use of the managed_image_id field. This field accepts an azurerm_shared_image_version image; allowing custom "golden" images to be used in lieu of a market place image. 
 
-> If you're looking to build a shared deskto environment, you may also consider (**FSLogix**)[https://learn.microsoft.com/en-us/fslogix/overview-what-is-fslogix].
+> If you're looking to build a shared desktop environment, you may also consider (**FSLogix**)[https://learn.microsoft.com/en-us/fslogix/overview-what-is-fslogix].
