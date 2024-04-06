@@ -61,12 +61,12 @@ module "shared02_vms_b" {
 # Resources that could be shared among pools were not included in the module.
 # Sample scaling plan. 
 resource "azurerm_virtual_desktop_scaling_plan" "shared_scaling" {
-  name                = "${local.prefix}-${var.rg}-SP"
+  name                = "${local.prefix}-DesktopScaling-SP01"
   resource_group_name = data.azurerm_resource_group.example.id
   location            = var.region
-  friendly_name       = "Application Pool Scaling Plan"
+  friendly_name       = "Shared Desktop Scaling Plan"
   description         = "This scaling plan is used to power down unused machines on a schedule to minimize cost."
-  time_zone           = "Central Standard Time"
+  time_zone           = "Central Europe Standard Time" # https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/
   schedule {
     name                                 = "WorkWeek"
     days_of_week                         = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
