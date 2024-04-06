@@ -79,7 +79,7 @@ resource "azurerm_virtual_desktop_scaling_plan" "app_plan" {
   location            = var.region
   friendly_name       = "Application Pool Scaling Plan"
   description         = "This scaling plan is used to power down unused machines on a schedule to minimize cost."
-  time_zone           = "Central Standard Time"
+  time_zone           = "Greenwich Standard Time" # https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/
   schedule {
     name                                 = "EveryDay"
     days_of_week                         = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
