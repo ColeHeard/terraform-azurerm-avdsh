@@ -4,7 +4,7 @@
 
 Author: Cole Heard
 
-Version: 1.0.0
+Version: 1.0.1
 
 This module creates sessionhosts for Azure Virtual desktop. It is a companion module for version 1.1.0 of [terraform-azurerm-avd](https://github.com/ColeHeard/terraform-azurerm-avd).
 
